@@ -70,7 +70,7 @@ trash (){
 }
 
 # 完全删除
-alias rrm ='/bin/rm' ## macos 
+alias rrm='/bin/rm' # macos
 
 # 清空回收站
 alias clt=cleartrash
