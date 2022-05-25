@@ -93,5 +93,5 @@ psss(){
 # 作用：删除当前目录下所有（包括子目录）由finder生成的.DS_Store隐藏目录
 alias rmdss=removeDSStore
 removeDSStore(){
-    find ./ -name ".DS_Store" -depth -exec /bin/rm \;
+    find ./ -name ".DS_Store" -depth -exec /bin/rm {} \;
 }
