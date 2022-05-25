@@ -88,3 +88,10 @@ alias pss=psss
 psss(){
     ps -ax|grep $1 |grep -v grep|awk '{printf $1"\t"$5"\n"}'
 }
+
+
+# 作用：删除当前目录下所有（包括子目录）由finder生成的.DS_Store隐藏目录
+alias rmdss=removeDSStore
+removeDSStore(){
+    find ./ -name ".DS_Store" -depth -exec /bin/rm \;
+}
