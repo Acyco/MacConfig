@@ -95,3 +95,9 @@ alias rmdss=removeDSStore
 removeDSStore(){
     find ./ -name ".DS_Store" -depth -exec /bin/rm {} \;
 }
+
+# 作用： 查看配置的别名服务器
+alias sera=serveralias
+serveralias(){
+    cat ~/.ssh/config | grep 'Host ' | awk '{printf $2"\n"}'
+}
