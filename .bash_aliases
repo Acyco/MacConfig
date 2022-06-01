@@ -49,7 +49,8 @@ alias gush='git push origin'
 ############################
 #      tool                #
 ############################
-alias myip='curl ifconfig.me' # ip
+#alias myip='curl ifconfig.me' # ip
+alias myip='curl whatismyip.akamai.com' #ip
 alias tq='curl wttr.in/quanzhou' # 天气
 
 #创建目录并进入
@@ -101,3 +102,8 @@ alias sera=serveralias
 serveralias(){
     cat ~/.ssh/config | grep 'Host ' | awk '{printf $2"\n"}'
 }
+
+
+# proxy
+alias proxy='export all_proxy=socks5://127.0.0.1:1089'
+alias unproxy='unset all_proxy'
