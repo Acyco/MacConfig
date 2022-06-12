@@ -5,3 +5,5 @@
 * ln -s ~/MacConfig/.zshrc ~/.zshrc
 
 * ln -s ~/MacConfig/.vimrc ~/.vimrc
+
+* ln -s ~/MacConfig/.ideavimrc ~/.ideavimrc
