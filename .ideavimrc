@@ -25,6 +25,7 @@ map Q gq
 
 
 " Find more examples here: https://jb.gg/share-ideavimrcer
+
 " set leader key
 nnoremap <SPACE> <Nop>
 let mapleader = " "
@@ -37,8 +38,10 @@ set ignorecas
 " plugins
 set easymotion
 set surround
+set NERDTree
+set which-key
 " 在 normal 模式保持英文状态,并在回到 insert 时恢复输入法到原来的状态.例如,编写一段中文注释,用中文输入法写了一段文字,进入 normal 模式移动光标到下一行,再回到插入模式继续使用中文编辑.
-set keep-english-in-normal-and-restore-in-insert
+" set keep-english-in-normal-and-restore-in-insert
 
 " basic key mapping
 set so=10
@@ -97,10 +100,11 @@ nnoremap <leader>gr :action Git.ResolveConflicts<CR>
 nnoremap <leader>ga :action Annotate<CR>
 nnoremap <leader>or :action FileMenu<CR>
 nnoremap <leader>r :action RecentFiles<CR>
-nnoremap <leader>s :action FileStructurePopup<CR>
 
 " window operation
+let g:WitchKeyDesc_NextWindow = "<leader>wn NextWindow"
 noremap <leader>wn :action NextWindow<CR>
+let g:WitchKeyDesc_PreviousWindow "<leader>wp PreviousWindow"
 noremap <leader>wp :action PreviousWindow<CR>
 
 " navigation
@@ -112,7 +116,7 @@ nnoremap gr :action RenameElement<CR>
 
 
 " code actions
-nnoremap U :action FindUsages<CR>
+noemap U :action FindUsages<CR>
 nnoremap R :action RenameElement<CR>
 nnoremap == :action ReformatCode<CR>
 vnoremap = :action ReformatCode<CR>
